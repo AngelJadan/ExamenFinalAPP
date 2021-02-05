@@ -36,7 +36,7 @@ public class GestionClienteON {
 		try {
 			if (cliente.getSaldo()>=recarga) {
 				float nsaldo = cliente.getSaldo()-recarga;
-				cliente.setSaldo(recarga);
+				cliente.setSaldo(nsaldo);
 				estado = cliDAO.update(cliente);
 			}
 		} catch (Exception e) {

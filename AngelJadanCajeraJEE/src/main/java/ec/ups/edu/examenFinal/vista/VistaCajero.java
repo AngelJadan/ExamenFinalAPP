@@ -72,6 +72,9 @@ public class VistaCajero {
 					cliente = gcllienteon.buscarCliente(cedula, cta);
 					FacesContext.getCurrentInstance().addMessage("formul",
 							new FacesMessage("Debito realizado; nuevo saldo "+cliente.getSaldo()));
+				}else {
+					FacesContext.getCurrentInstance().addMessage("formul",
+							new FacesMessage("Debito no realziado"));
 				}
 				FacesContext.getCurrentInstance().addMessage("formul",
 						new FacesMessage("Autorizacio #: "+sms.getMessage()));
@@ -79,7 +82,7 @@ public class VistaCajero {
 				FacesContext.getCurrentInstance().addMessage("formul",
 						new FacesMessage("No autorizado"));
 			}
-		}if(estado == "false") {
+		}else {
 			FacesContext.getCurrentInstance().addMessage("formul",
 					new FacesMessage("Rechazado por la operadora"));
 		}
