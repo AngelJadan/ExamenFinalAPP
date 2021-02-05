@@ -71,7 +71,8 @@ public class VistaCajero {
 				if (est==true) {
 					cliente = gcllienteon.buscarCliente(cedula, cta);
 					FacesContext.getCurrentInstance().addMessage("formul",
-							new FacesMessage("Debito realizado; nuevo saldo "+cliente.getSaldo()));
+							new FacesMessage("Debito realizado; nuevo saldo "+cliente.getSaldo()
+							+"\n Autorizacion n: "+sms.getAutorizacion()));
 				}else {
 					FacesContext.getCurrentInstance().addMessage("formul",
 							new FacesMessage("Debito no realziado"));
