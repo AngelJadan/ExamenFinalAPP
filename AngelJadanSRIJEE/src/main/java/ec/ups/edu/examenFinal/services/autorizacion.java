@@ -21,14 +21,14 @@ public class autorizacion {
 			,@QueryParam("apellido") String apellido,@QueryParam("valor") String valor) {
 		Message sms = new Message();
 		boolean estado = false;
-		Random rand = new Random();
+		Random rand = new Random();		
 		estado = rand.nextBoolean();
 		Date fecha =new Date();
 		
 		if (estado==true) {
 			sms.setCode("200");
 			sms.setAutorizacion("Autorizado");
-			sms.setMessage(fecha+cedula);
+			sms.setMessage(fecha+cedula+"Factura: "+rand.nextInt()*100);
 		}else{
 			sms.setCode("200");
 			sms.setAutorizacion("Rechazado");
