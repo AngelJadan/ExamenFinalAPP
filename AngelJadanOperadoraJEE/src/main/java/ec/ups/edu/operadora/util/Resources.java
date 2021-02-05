@@ -1,4 +1,4 @@
-package ec.ups.edu.examenFinal.util;
+package ec.ups.edu.operadora.util;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 public class Resources {
 
-	String dsName = "java:jboss/datasources/examenFinal";
+	String dsName = "java:jboss/datasources/AngelJadanOperadora";
 
     @Produces
     private Connection createConnection() throws SQLException, NamingException {

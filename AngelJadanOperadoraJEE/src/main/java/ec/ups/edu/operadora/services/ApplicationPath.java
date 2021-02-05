@@ -1,4 +1,4 @@
-package ec.ups.edu.examenFinal.services;
+package ec.ups.edu.operadora.services;
 
 import javax.ws.rs.core.Application;
 
