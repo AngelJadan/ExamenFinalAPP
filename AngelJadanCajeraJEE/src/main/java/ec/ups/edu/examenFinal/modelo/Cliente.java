@@ -2,6 +2,7 @@ package ec.ups.edu.examenFinal.modelo;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -13,10 +14,15 @@ public class Cliente implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@Id
+	@Column(nullable = false)
 	private String cedula;
+	@Column(nullable = false)
 	private String nombre;
+	@Column(nullable = false)
 	private String apellido;
+	@Column(nullable = false)
 	private int cuenta;
+	@Column(nullable = false)
 	private float saldo;
 	
 	public Cliente() {
